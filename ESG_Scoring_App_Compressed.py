@@ -17,12 +17,11 @@ def calculate_average_score(data):
     return np.mean(list(data.values()))
 
 # Main section for the compressed app
-st.title("Overall ESG Score")
+st.title("Overall Score")
 
 # Display the overall ESG score using a gauge
 overall_score = calculate_average_score(sample_data)
-st.subheader("Overall ESG Score")
-st.write(f"The overall ESG score is: {overall_score:.2f}")
+st.write(f"The overall score is: {overall_score:.2f}")
 # Display the score using a gauge (for demonstration purposes, using a progress bar instead of a gauge)
 st.progress(overall_score / 100)  # Assuming overall_score ranges from 0 to 100
 
